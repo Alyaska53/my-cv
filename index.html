@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmitry Buravkin CV RS School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/styles.css">
+  </head>
+  
+  <body>
+    <div class="container-centered">
+      <div class="three-columns">
+          
+          <div class="left-column">
+            <header>
+              <img src="assets/images/avatar.jpg" alt="Portrait" width="256">
+              <h1>Dmitry Buravkin</h1>
+              <h2>Junior Frontend Developer</h2>
+            </header>
+          </div>
+
+          <div class="center-column">
+            <main>
+              <section>
+                <div class="sub-header">
+                  <h3>About myself</h3>
+                </div>
+                <p>
+                  In 2020 I graduated from the Belarusian National Technical University with a degree in Power Engineering.
+                  Today I work as an electrical design engineer.
+                </p>
+                <p>
+                  Recently I realized that the chosen profession is not suitable for me. So I decided to try my hand at web development.
+                  I enjoy learning and solving various problems in this direction.
+                </p>
+                <p>
+                  So I decided to try my hand at web development. I enjoy learning and solving various problems in this direction.
+                </p>
+                <p>
+                  I want to become a good front-end developer and I’m going to my goal!
+                </p>
+              </section>
+              <section>
+                <div class="sub-header">
+                  <h3>Courses</h3>
+                </div>
+                <ul>
+                  <li>
+                    HTML and CCS Tutorials on the <a href="https://ru.code-basics.com/">Code-Basics</a> (completed)
+                  </li>
+                  <li>
+                    JavaScript Manual on <a href="https://learn.javascript.ru/">learn.javascript.ru</a> (in progress)
+                  </li>
+                  <li>
+                    RS School Course “JS / FRONT-END” (in progress)
+                  </li>  
+                </ul>
+              </section>
+              <section>
+                <div class="sub-header">
+                  <h3>Code example</h3>
+                </div>
+                <p>
+                  KATA from CODEWARS: write a function that takes a string of parentheses, and determines if the order of the parentheses is valid.
+                  The function should return true if the string is valid, and false if it’s invalid.
+                </p>
+                <pre>
+                  <code>
+function validParentheses(parens) {
+  
+  if (parens.length > 100) {
+    return false;
+  }
+                      
+  let arr = parens.split('').filter( el => (el == ')') || (el == '(') );  
+  let stack = [];
+                      
+  arr.forEach( function(el) {
+    if (el == '(') {
+      stack.push(el);
+    } else {
+      if (stack.length == 0 || stack[stack.length - 1] == ')') {
+        stack.push(el);
+      } else {
+        stack.pop();
+      }
+    }
+  });
+                      
+  return (stack.length) ? false : true;
+}
+                  </code>
+                </pre>
+              </section>
+            </main>
+
+            <footer>
+              <p>© 2021</p>
+            </footer>
+          </div>
+
+          <div class="right-column">
+            <aside>
+              <section class="contacts h3">
+                <h3>Contacts</h3>
+                <ul>
+                  <li>
+                    <img src="assets/images/phone.svg" alt="Phone">
+                    <p>+375 (29) 8930685</p>
+                  </li>
+                  <li>
+                    <img src="assets/images/email.svg" alt="Email">
+                    <p>dmitry.buravkin@gmail.com</p>
+                  </li>
+                  <li>
+                    <img src="assets/images/telegram.svg" alt="Telegram">
+                    <p>@DmitryBuravkin</p>
+                  </li>
+                  <li>
+                    <img src="assets/images/linkedin.svg" alt="Phone">
+                    <a href="https://www.linkedin.com/in/dmitry-buravkin-6168b9219/">LinkedIn</a>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="skills">
+                <h3>Skills</h3>
+                <ul>
+                  <li>HTML5, CSS3</li>
+                  <li>JavaScript Basics</li>
+                  <li>Git, GitHub</li>
+                  <li>VS Code</li>
+                  <li>Autodesk AutoCAD</li>
+                  <li>Autodesk Revit</li>
+                </ul>
+              </section>
+
+              <section class="language">
+                <h3>Languages</h3>
+                <ul>
+                  <li>
+                    <p class="language-name">English</p>
+                    <p>A2</p>
+                  </li>
+                  <li>
+                    <p class="language-name">Russian</p>
+                    <p>Native</p> 
+                  </li>
+                  <li>
+                    <p class="language-name">Belarusian</p>
+                    <p>Native</p> 
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+
+      </div>
+      
+    </div>
+  </body>
+</html>
