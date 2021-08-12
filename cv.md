@@ -22,3 +22,62 @@ So I decided to try my hand at web development. I enjoy learning and solving var
 I really want to become a good _front-end developer_ and I'm going to my goal!
 
 ***
+
+### Skills and Proficiency:
+
+* HTML5, CSS3  
+* JavaScript Basics  
+* Git, GitHub  
+* VS Code  
+* Autodesk AutoCAD
+* Autodesk Revit
+
+***
+
+### Code example:
+
+**KATA from CODEWARS**: _Write a function that takes a string of parentheses, and determines if the order of the parentheses is valid._  
+_The function should return_ `true` _if the string is valid, and_ `false` _if it's invalid._
+
+```
+function validParentheses(parens) {
+  
+  if (100 < parens.length) {
+    return false;
+  }
+  
+  parens = parens.split('');
+    
+  let arr = parens.filter( el => ( el == ')' ) || ( el == '(' ) );  
+  let stack = [];
+  
+  arr.forEach( function(el) {
+    if (el == '(') {
+      stack.push(el);
+    } else {
+        if (stack.length == 0 || stack[stack.length - 1] == ')') {
+          stack.push(el);
+        } else {
+          stack.pop();
+        }
+    }
+  });
+  
+  return (stack.length) ? false : true;
+}
+```
+***
+
+### Courses:
+
+* HTML and CCS Tutorials on the [Code-Basics](https://ru.code-basics.com/) (completed)
+* JavaScript Manual on [learn.javascript.ru](https://learn.javascript.ru/) (in progress)
+* RS School Course "JS / FRONT-END" (in progress)
+
+***
+
+### Languages:
+
+* Russian (native)
+* Belarusian (native)
+* English (А2)
