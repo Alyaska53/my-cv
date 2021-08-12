@@ -1,1 +1,1 @@
-https://Alyaska53.github.io/my-cv/cv
+https://Alyaska53.github.io/my-cv/
